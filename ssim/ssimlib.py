@@ -164,8 +164,8 @@ class SSIM(object):
         widths = np.arange(1, width+1)
 
         # Use the image data as arrays
-        sig1 = np.asarray(self.img.img_gray.getdata())
-        sig2 = np.asarray(target.img_gray.getdata())
+        sig1 = np.asarray(self.img.img_gray.data)
+        sig2 = np.asarray(target.img_gray.data)
 
         # Convolution
         cwtmatr1 = signal.cwt(sig1, signal.ricker, widths)
